@@ -16,7 +16,7 @@ def cluster(username, password, database):
     if df.empty:
         raise ValueError("Processed data table Nova_Partner_Processed is empty or missing!")
 
-    # Prepare features for clustering (exclude partner_id if it exists)
+    # Drop partner_id if present
     features = df.drop(columns=['partner_id'], errors='ignore')
 
     # K-Means clustering with 3 clusters
@@ -33,14 +33,19 @@ def cluster(username, password, database):
     df['pca1'] = pca_result[:, 0]
     df['pca2'] = pca_result[:, 1]
 
+    # Transform centroids into PCA space for plotting
+    centroids_pca = pca.transform(kmeans.cluster_centers_)
+
     # Plotting
     fig, ax = plt.subplots(figsize=(8, 6))
     scatter = ax.scatter(df['pca1'], df['pca2'], c=df['cluster'], cmap='viridis', alpha=0.6)
-    ax.set_title('K-Means Clustering (PCA-reduced)')
+    ax.scatter(centroids_pca[:, 0], centroids_pca[:, 1],
+               c="red", marker="X", s=200, label="Centroids")
+    
+    ax.set_title('K-Means Clustering on Nova Partner Data (PCA-reduced)')
     ax.set_xlabel('PCA Component 1')
     ax.set_ylabel('PCA Component 2')
-    legend1 = ax.legend(*scatter.legend_elements(), title="Clusters")
-    ax.add_artist(legend1)
+    ax.legend()
     plt.grid(True)
 
     # Show plot in Streamlit

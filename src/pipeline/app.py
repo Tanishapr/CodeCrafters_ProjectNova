@@ -19,12 +19,15 @@ with tab1:
             try:
                 st.info("Ingesting data to PostgreSQL...")
                 ingest_data(csv_path, username, password, db_name)
+                st.info("data injested.")
 
                 st.info("Preprocessing data...")
                 preprocess(username, password, db_name)  # data_preprocess.py 
+                st.info("data preprocessed.")
 
                 st.info("Clustering data...")
                 cluster(username, password, db_name)  #  data_cluster.py
+                st.info("data clustered")
 
                 st.success("Pipeline completed: data ingested, preprocessed, clustered!")
             except Exception as e:

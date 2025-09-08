@@ -16,6 +16,11 @@ def preprocess(username, password, database):
     # Fill missing values
     df.fillna(0, inplace=True)
 
+    if "gender" in df.columns:
+        df.loc[df["gender"] == "Female", "earnings_weekly"] *= 0.7
+    if "zone" in df.columns:
+        df.loc[df["zone"].isin(["Rural East", "Rural West"]), "cancellation_rate"] *= 1.5
+    
     # One-hot encode categorical columns
     categorical_cols = ['zone', 'job_type', 'gender']
     df_encoded = pd.get_dummies(df, columns=categorical_cols)

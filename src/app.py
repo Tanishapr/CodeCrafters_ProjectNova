@@ -45,44 +45,12 @@ with tab1:
                 st.subheader("Top Feature Importances")
                 st.bar_chart(fi.set_index("feature").head(10))
 
-                st.subheader("Bias Analysis - Before Mitigation")
-                st.dataframe(bias_before)
-                st.bar_chart(bias_before)
-
-                st.subheader("Bias Analysis - After Mitigation")
-                st.dataframe(bias_after)
-                st.bar_chart(bias_after)
-
                 st.subheader("Sample Predictions")
                 st.dataframe(df_results.head(20))
             except Exception as e:
                 st.error(f"Pipeline error: {e}")
         else:
-            st.warning("Enter all database credentials to run pipeline.")
-            
-# with tab2:
-#     st.header("Predict Nova Credit Score")
-
-#     # Collect user input
-#     user_data = {
-#         "earnings_weekly": st.number_input("Earnings Weekly", min_value=0.0),
-#         "trip_count_monthly": st.number_input("Trip Count Monthly", min_value=0),
-#         "avg_rating_last_90_days": st.number_input("Average Rating (last 90 days)", min_value=0.0, max_value=5.0, step=0.01),
-#         "cancellation_rate": st.number_input("Cancellation Rate (%)", min_value=0.0, max_value=100.0, step=0.1),
-#         "age": st.number_input("Age", min_value=18, max_value=100),
-#         "rent_paid_last_12_months": st.number_input("Rent Paid Last 12 Months", min_value=0.0),
-#         "utility_paid_last_12": st.number_input("Utility Paid Last 12 Months", min_value=0.0),
-#         "app_logins_last_30_days": st.number_input("App Logins Last 30 Days", min_value=0),
-#         "complaints_last_6_months": st.number_input("Complaints Last 6 Months", min_value=0),
-#         "outstanding_loans": st.number_input("Outstanding Loans", min_value=0.0),
-#     }
-
-#     if st.button("Predict Credit Score"):
-#         try:
-#             prediction = predict_credit_score(user_data)
-#             st.success(f"Predicted Nova Credit Score: {prediction:.2f}")
-#         except Exception as e:
-#             st.error(f"Prediction error: {e}")    
+            st.warning("Enter all database credentials to run pipeline.") 
             
 with tab2:
     st.header("Predict Nova Score")
@@ -91,9 +59,9 @@ with tab2:
     avg_rating_last_90_days = st.slider("Avg Rating (90 days)", 0.0, 5.0, 4.5, 0.01)
     cancellation_rate = st.slider("Cancellation Rate", 0.0, 1.0, 0.02, 0.001)
     zone = st.selectbox("Zone", ["Urban North", "Urban South", "Rural East", "Rural West"])
-    job_type = st.selectbox("Job Type", ["Delivery Bike", "Delivery Car", "Ride-Hail"])
+    job_type = st.selectbox("Job Type", ["Delivery Bike", "Delivery Car", "Delivery Van"])
     age = st.number_input("Age", min_value=18, max_value=80, value=30, step=1)
-    gender = st.selectbox("Gender", ["Male", "Female", "Other"])
+    gender = st.selectbox("Gender", ["Male", "Female"])
     rent_paid_last_12_months = st.number_input("Rent Payments (last 12 months)", min_value=0, max_value=12, step=1)
     utility_paid_last_12 = st.number_input("Utility Payments (last 12 months)", min_value=0, max_value=12, step=1)
     app_logins_last_30_days = st.number_input("App Logins (last 30 days)", min_value=0, step=1)

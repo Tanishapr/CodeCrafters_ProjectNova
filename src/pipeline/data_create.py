@@ -1,6 +1,17 @@
+"""
+Module: data_create.py
+Author: Tanisha Priya, Harshita Jangde, Prachi Tavse
+Date: 2025-09-08
+Description:
+    Generates synthetic Nova Partner dataset for machine learning experiments.
+    The dataset includes demographics, earnings, trips, ratings, cancellations,
+    payments, engagement metrics, and loans. The final dataset is saved as CSV.
+"""
+
 import numpy as np
 import pandas as pd
 
+# Set random seed for reproducibility
 np.random.seed(42)
 
 # Parameters
@@ -15,10 +26,10 @@ for i in range(n_samples):
     # Demographics
     age = np.random.randint(20, 60)
     gender = np.random.choice(genders, p=[0.6, 0.4])
-    zone = np.random.choice(zones, p=[0.4, 0.3, 0.15, 0.15])  # urban bias
+    zone = np.random.choice(zones, p=[0.4, 0.3, 0.15, 0.15])
     job_type = np.random.choice(job_types, p=[0.5, 0.4, 0.1])
     
-    # Earnings & trips (with structured correlation)
+    # Earnings & trips (structured correlation)
     base_earning = np.random.normal(12000, 3000)
     if zone.startswith("Urban"):
         base_earning *= 1.2
@@ -45,7 +56,7 @@ for i in range(n_samples):
     # Loans
     outstanding_loans = max(0, np.random.normal(earnings_weekly * 0.2, 2000))
     if earnings_weekly < 8000:
-        outstanding_loans *= 1.5  # poorer but higher debt risk
+        outstanding_loans *= 1.5
     
     data.append([
         f"GIG{i}",

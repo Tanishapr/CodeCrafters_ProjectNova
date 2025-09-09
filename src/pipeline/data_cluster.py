@@ -1,6 +1,6 @@
 """
 Module: data_cluster.py
-Author: Your Name
+Author: Harshita Jangde, Prachi Tavse, Tanisha Priya
 Date: 2025-09-08
 Description:
     This module defines a function to perform K-Means clustering on preprocessed 

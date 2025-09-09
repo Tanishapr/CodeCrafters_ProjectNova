@@ -1,6 +1,6 @@
 """
 Module: data_create.py
-Author: Tanisha Priya, Harshita Jangde, Prachi Tavse
+Author: Prachi Tavse, Tanisha Priya, Harshita Jangde
 Date: 2025-09-08
 Description:
     Generates synthetic Nova Partner dataset for machine learning experiments.

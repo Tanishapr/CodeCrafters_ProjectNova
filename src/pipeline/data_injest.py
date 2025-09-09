@@ -1,6 +1,6 @@
 """
 Module: data_ingest.py
-Author: Tanisha Priya, Harshita Jangde, Prachi Tavse
+Author: Harshita Jangde, Prachi Tavse, Tanisha Priya
 Date: 2025-09-08
 Description:
     Reads a CSV file containing Nova Partner data and ingests it into

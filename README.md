@@ -77,5 +77,5 @@ Project/
 
 ## Contributors
 - [![Harshita Jangde](https://github.com/HarshitaJangde.png?size=40)](https://github.com/HarshitaJangde) [@HarshitaJangde](https://github.com/HarshitaJangde) 
-- [![Tanisha Priya](https://github.com/tanishapr.png?size=40)](https://github.com/tanishapr) [@TanishaPriya](https://github.com/tanishapr) 
+- [![Tanisha Priya](https://github.com/tanishapr.png?size=4)](https://github.com/tanishapr) [@TanishaPriya](https://github.com/tanishapr) 
 - [![Prachi Tavse](https://github.com/prachitavse.png?size=40)](https://github.com/prachitavse) [@PrachiTavse](https://github.com/prachitavse) 

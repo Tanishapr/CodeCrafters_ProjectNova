@@ -22,6 +22,7 @@ Configure your PostgreSQL credentials in the Fairness.ipynb
 
 
 ## Project Structure
+```bash
 Project/
 ├── Data/
 │   └── Data.csv                    # Mock data CSV file
@@ -43,7 +44,7 @@ Project/
 │   └── app.py                      # Streamlit app for user interaction and scoring
 ├── README.md                       # Project documentation
 └── requirements.txt                # Python dependencies
-
+```
 
 ## Usage
 

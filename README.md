@@ -1,4 +1,4 @@
-# cc-
+# Code Crafters - Project NOVA
 ## Project Overview
 This project implements a comprehensive machine learning pipeline designed for partner segmentation and Nova score prediction, leveraging synthetically generated mock data to simulate real-world operational scenarios. The pipeline orchestrates multiple stages—including data ingestion, preprocessing with feature engineering, clustering via K-Means, and interactive score prediction through a user-friendly Streamlit application. In addition to core model functionalities, the project integrates fairness assessments through statistical bias metrics and advanced explainability techniques using SHAP (SHapley Additive exPlanations), ensuring transparency and trustworthiness of predictions. The modular architecture supports scalability, easy maintainability, and seamless adaptation to real datasets and production environments, making it a robust prototype for delivery partner analytics and decision support.
 

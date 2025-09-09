@@ -9,8 +9,7 @@ This project implements a comprehensive machine learning pipeline designed for p
 - [Project Structure](#project-structure)
 - [Usage](#usage)
 - [Results](#results)
-- [License](#license)
-- [Acknowledgments](#acknowledgments)
+- [Contributors](#contributors)
 
 
 ## Setup & Installation

@@ -76,6 +76,6 @@ Project/
 3. SHAP analysis reveals which features most influence model predictions, increasing model transparency and trust.
 
 ## Team Members
-- [![Harshita Jangde](https://github.com/alice.png?size=40)](https://github.com/HarshitaJangde) [@HarshitaJangde](https://github.com/HarshitaJangde) 
-- [![Tanisha Priya](https://github.com/bob.png?size=40)](https://github.com/tanishapr) [@TanishaPriya](https://github.com/tanishapr) 
-- [![Prachi Tavse](https://github.com/eve.png?size=40)](https://github.com/prachitavse) [@PrachiTavse](https://github.com/prachitavse) 
+- [![Harshita Jangde](https://github.com/HarshitaJangde.png?size=40)](https://github.com/HarshitaJangde) [@HarshitaJangde](https://github.com/HarshitaJangde) 
+- [![Tanisha Priya](https://github.com/tanishapr.png?size=40)](https://github.com/tanishapr) [@TanishaPriya](https://github.com/tanishapr) 
+- [![Prachi Tavse](https://github.com/prachitavse.png?size=40)](https://github.com/prachitavse) [@PrachiTavse](https://github.com/prachitavse) 
